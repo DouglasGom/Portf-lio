@@ -1,0 +1,509 @@
+:root {
+  --black: #050505;
+  --blue: #0040ff;
+  --text-light: #f5f5f5;
+  --text-gray: #a0a0a0;
+  --bg-cards: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ================= HEADER ================= */
+header {
+  padding: 20px 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: var(--text-gray);
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+header nav.menu-desktop a:hover,
+header nav.menu-desktop a.ativo {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
+
+/* ================= TIPOGRAFIA E BOTÕES ================= */
+h2.titulo {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+  padding: 50px 0;
+}
+
+h2.titulo span,
+span {
+  color: var(--blue);
+}
+
+button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--blue);
+  color: #fff;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+  box-shadow: 0 0 15px rgba(0, 64, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* ================= TOPO DO SITE ================= */
+section.topo-do-site {
+  padding: 200px 12% 80px;
+  height: 100vh;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: space-between;
+  gap: 90px;
+}
+
+.topo-do-site .txt-topo-site h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.topo-do-site .txt-topo-site h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: var(--text-gray);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.topo-do-site .img-topo-site img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 50%;
+  animation: flutuar 3s ease-in-out infinite alternate;
+  box-shadow: 0 0 40px rgba(0, 64, 255, 0.2);
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/* ================= ESPECIALIDADES ================= */
+section.especialidades {
+  padding: 80px 4%;
+}
+
+section.especialidades .flex {
+  gap: 40px;
+}
+
+.especialidades .especialidades-box {
+  background-color: var(--bg-cards);
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.3s;
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.especialidades .especialidades-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 64, 255, 0.15);
+  border-color: var(--blue);
+}
+
+.especialidades .especialidades-box i {
+  font-size: 50px;
+  color: var(--blue);
+}
+
+.especialidades .especialidades-box h3 {
+  font-size: 24px;
+  margin: 20px 0 15px;
+}
+
+.especialidades .especialidades-box p {
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* ================= SOBRE ================= */
+section.sobre {
+  padding: 80px 4%;
+}
+
+section.sobre .flex {
+  align-items: center;
+  gap: 60px;
+}
+
+section.sobre .img-sobre img {
+  width: 100%;
+  max-width: 2000px;
+  border-radius: 40px;
+}
+
+.sobre .txt-sobre h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.sobre .txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+  color: var(--text-gray);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.btn-social {
+  margin-top: 30px;
+}
+
+.btn-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--bg-cards);
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-social a:hover {
+  background-color: var(--blue);
+  transform: scale(1.1);
+}
+
+/* ================= PORTFÓLIO ================= */
+section.portfolio {
+  padding: 80px 4%;
+}
+
+section.portfolio .flex {
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-port {
+  width: 100%;
+  max-width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: center top;
+  transition: background-position 8s ease;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid var(--blue); /* Borda mais sutil */
+  overflow: hidden;
+}
+
+.img-port:hover {
+  background-position: center bottom;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Fundo corrigido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: 0.4s;
+  text-align: center;
+  padding: 20px;
+}
+
+.img-port:hover .overlay {
+  opacity: 1;
+}
+
+/* ================= FORMULÁRIO ================= */
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: var(--bg-cards);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 0;
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 10px rgba(0, 64, 255, 0.2);
+}
+
+form textarea {
+  resize: none;
+  height: 200px;
+}
+
+form .btn-enviar input {
+  width: 100%; /* Botão ocupando a largura em telas menores */
+  max-width: 250px;
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 40px 4%;
+  background-color: var(--bg-cards);
+}
+
+footer .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .line-footer {
+  padding: 20px 0;
+}
+
+.borda {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .line-footer p i {
+  color: var(--blue);
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+footer .line-footer p a {
+  color: var(--text-gray);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer .line-footer p a:hover {
+  color: #fff;
+}
+
+/* ================= MENU MOBILE & MEDIA QUERIES ================= */
+.btn-abrir-menu {
+  display: none;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  .btn-abrir-menu {
+    display: block;
+  }
+
+  .btn-abrir-menu i {
+    color: var(--blue);
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .menu-mobile {
+    display: block;
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .menu-mobile.abrir-menu {
+    width: 70%;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+  }
+
+  .menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+  }
+
+  .menu-mobile .btn-fechar {
+    padding: 20px 5%;
+    text-align: right;
+  }
+
+  .menu-mobile .btn-fechar i {
+    color: var(--blue);
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .menu-mobile nav ul {
+    text-align: right;
+  }
+
+  .menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 20px 8%;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .menu-mobile nav ul li a:hover {
+    background-color: var(--blue);
+    color: #fff;
+  }
+
+  .overlay-menu {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+  }
+
+  section.topo-do-site .flex {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  section.sobre .flex {
+    text-align: center;
+  }
+
+  .btn-social {
+    justify-content: center;
+  }
+
+  footer .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue);
+}
